@@ -34,13 +34,22 @@ import random
 import re
 import sys
 
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
 # Complete the solve function below.
 def solve(s):
     new_s=s.split()
+    for i in new_s:
+        s=s.replace(i,i.capitalize())
     
-    new_s[0]=new_s[0].capitalize()
-    new_s[1]=new_s[1].capitalize()
-    return " ".join(new_s)
+    
+    return s
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
